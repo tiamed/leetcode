@@ -9,7 +9,12 @@
  * @param {ListNode} node
  * @return {void} Do not return anything, modify node in-place instead.
  */
-var deleteNode = function(node) {
-    node.val = node.next.val;
-    node.next = node.next.next;
+interface LinkedListNode<T> {
+  val: T;
+  next: LinkedListNode<T>;
+}
+
+var deleteNode = function(node: LinkedListNode<number>) {
+  node.val = node.next.val;
+  node.next = node.next.next;
 };
