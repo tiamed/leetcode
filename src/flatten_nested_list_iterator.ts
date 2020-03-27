@@ -19,7 +19,7 @@ class NestedIterator implements IterableIterator<number | undefined> {
   }
 
   constructor(nestedList: NestedInteger[]) {
-    this.list = flatAll([...nestedList]);
+    this.list = flatAll(nestedList);
   }
 
   next() {
