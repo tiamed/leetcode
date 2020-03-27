@@ -23,7 +23,8 @@ class NestedIterator implements IterableIterator<number | undefined> {
   }
 
   next() {
-    return { value: this.list.shift(), done: this.list.length === 0 };
+    const value = this.list.shift();
+    return { value, done: value == void 0 };
   }
 }
 
